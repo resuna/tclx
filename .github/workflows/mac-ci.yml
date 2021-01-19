@@ -25,12 +25,10 @@ jobs:
         ./configure
         make
         sudo make install
-        echo "==== probe ===="
-        find /usr/local -name tclConfig.sh
     - name: configure
-      run: |       
+      run: |
         autoreconf -vi
-        ./configure --with-tcl=/usr/local/lib/tcl8.6 --prefix=/usr/local        
+        ./configure --with-tcl=/usr/local/lib --prefix=/usr/local
     - name: make
       run: |
         make
