@@ -16,8 +16,8 @@ jobs:
     - name: Build dependencies
       # Building tcl to make sure we get tclInt.h
       run: |
-        mkdir -p /private/tmp/git
-        cd /private/tmp/git
+        mkdir -p /usr/local/src/git
+        cd /usr/local/src/git
         git clone https://github.com/tcltk/tcl.git
         cd tcl
         git checkout core-8-6-branch
