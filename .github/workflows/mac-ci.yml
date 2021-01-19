@@ -16,8 +16,8 @@ jobs:
     - name: Build dependencies
       # Building tcl to make sure we get tclInt.h
       run: |
-        id
         sudo mkdir -p /usr/local/src/git
+	sudo chown `id -un` /usr/local/src/git
         cd /usr/local/src/git
         git clone https://github.com/tcltk/tcl.git
         cd tcl
