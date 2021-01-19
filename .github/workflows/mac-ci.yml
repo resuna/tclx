@@ -25,6 +25,8 @@ jobs:
         ./configure
         make
         sudo make install
+        echo "==== probe ===="
+        find /usr/local -name tclConfig.sh
     - name: configure
       run: |       
         autoreconf -vi
