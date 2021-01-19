@@ -14,6 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build dependencies
+      # Building tcl to make sure we get tclInt.h
       run: |
         mkdir -p /private/tmp/git
         cd /private/tmp/git
